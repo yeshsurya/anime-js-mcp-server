@@ -1,0 +1,61 @@
+{
+  "name": "anime-js-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server for Anime.js animation library, providing AI assistants with access to Anime.js components, APIs, examples, and documentation.",
+  "type": "module",
+  "main": "./build/index.js",
+  "bin": {
+    "anime-js-mcp-server": "./build/index.js"
+  },
+  "files": [
+    "build/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf build",
+    "prepublishOnly": "npm run clean && npm run build && chmod +x build/index.js",
+    "start": "node build/index.js",
+    "dev": "tsc && node build/index.js",
+    "test": "./test-package.sh",
+    "examples": "./examples.sh"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "anime",
+    "animejs",
+    "animation",
+    "javascript",
+    "typescript",
+    "svg",
+    "css",
+    "ai-tools",
+    "claude",
+    "copilot"
+  ],
+  "author": "Anime.js MCP Server",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliangarnier/anime-js-mcp-server.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.16.0",
+    "axios": "^1.8.4",
+    "cheerio": "^1.0.0",
+    "zod": "^3.24.2",
+    "winston": "^3.15.0",
+    "joi": "^17.13.3",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/uuid": "^10.0.0",
+    "typescript": "^5.7.2"
+  }
+}

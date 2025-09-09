@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(npm run build:*)",
+      "Bash(npm install)",
+      "Bash(git config:*)",
+      "Bash(npm whoami:*)",
+      "Bash(npm view:*)",
+      "Bash(npm publish:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
