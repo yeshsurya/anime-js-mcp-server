@@ -123,7 +123,22 @@ export LOG_LEVEL=info  # debug, info, warn, error
 
 ### Claude Desktop Integration
 
-Add to your Claude Desktop configuration:
+#### Using Claude MCP CLI (Recommended)
+
+If you have Claude MCP CLI installed, you can add the server with a single command:
+
+```bash
+mcp add anime-js --scope user --cmd npx anime-js-mcp-server
+```
+
+With GitHub token for enhanced features:
+```bash
+mcp add anime-js --scope user --cmd npx anime-js-mcp-server --env GITHUB_PERSONAL_ACCESS_TOKEN=your_token_here
+```
+
+#### Manual Configuration
+
+Alternatively, add to your Claude Desktop configuration manually:
 
 ```json
 {
